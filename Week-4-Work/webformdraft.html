@@ -31,26 +31,38 @@
                         <legend>Age Group:</legend>
 
                         <div>
-                            <input type="radio" name="age-group" id="13-19" />
+                            <input type="radio" name="age-group" id="13-19" value="teens" />
                             <label for="13-19">13-19</label>
                         </div>
                         <div>
-                            <input type="radio" name="age-group" id="20-29" />
+                            <input type="radio" name="age-group" id="20-29" value="20s" />
                             <label for="20-29">20-29</label>
                         </div>
                         <div>
-                            <input type="radio" name="age-group" id="30-39" />
+                            <input type="radio" name="age-group" id="30-39" value="30s" />
                             <label for="30-39">30-39</label>
                         </div>
                         <div>
-                            <input type="radio" name="age-group" id="40-49" />
+                            <input type="radio" name="age-group" id="40-49" value="40s" />
                             <label for="40-49">40-49</label>
                         </div>
                         <div>
-                            <input type="radio" name="age-group" id="50+" />
+                            <input type="radio" name="age-group" id="50+" value="50s+" />
                             <label for="50+">50+</label>
                         </div>
                     </fieldset>
+                </div>
+
+                <div>
+                    <select name="education" id="education">
+                        <optio value="none">No Degree</option>
+                        <option value="highschool">High School</option>
+                        <option value="college">College</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit" name="survey-submit" id="survey-submit">Submit</button>
                 </div>
             </form>
         </main>
