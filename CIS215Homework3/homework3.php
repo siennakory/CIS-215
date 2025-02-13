@@ -63,6 +63,15 @@ function whileEvenArray($n){
 };
 
 function forEvenArray($n){
+    $basearray = range(1, $n);
+    $evenarray = array();
+
+    foreach ($basearray as $num){
+        if (($num % 2) == 0){
+            array_push($evenarray, $num);
+        };
+    };
+    var_dump($evenarray);
 };
 
 function functions(){
