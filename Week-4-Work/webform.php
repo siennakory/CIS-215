@@ -12,7 +12,7 @@
         </header>
 
         <main>
-            <form action="" method="post" class="survey">
+            <form action="submit.php" method="post" class="survey">
                 <fieldset>
                     <legend>Personal Information:</legend>
 
