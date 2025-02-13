@@ -119,6 +119,13 @@ function randomValues(){
     return $endarray;
 };
 
+/*
+arrayWipe removes all instances of a provided value from a provided array.
+It uses a foreach loop to iterate through each value in the provided array and check that it is
+not equal to the provided value with an if statement. If the value is not equal to the wiped value,
+it will use array_push to add the value to the new array ($wipedarray).
+This function returns $wipedarray.
+*/
 function arrayWipe($basearray, $wipe){
     $wipedarray = array();
     foreach ($basearray as $value){
