@@ -167,6 +167,12 @@ function fizzBuzz($n){
     };
 };
 
+/*
+fizzBuzzAdapted is an altered version of the fizzBuzz function. It uses the same code for the same function, however an
+additional elseif statement is added to the if block in the foreach loop to echo Mazz if $num is divisible by 7, and
+Buzz is changed to Bozz. The purpose of this function is to demonstrate the adaptability of the original function
+by using the suggested edits with minimal edits.
+*/
 function fizzBuzzAdapted($n){
     $numberarray = range(1, $n);
 
