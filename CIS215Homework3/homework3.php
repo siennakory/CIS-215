@@ -27,6 +27,10 @@ function main(){
     echo " .......... ";
 
     fizzBuzz(20);
+
+    echo " .......... ";
+
+    fizzBuzzAdapted(20);
 };
 
 /*
@@ -158,6 +162,24 @@ function fizzBuzz($n){
         } elseif (($num % 5) == 0){
             echo "Buzz ";
         } else {
+            echo ($num . " ");
+        };
+    };
+};
+
+function fizzBuzzAdapted($n){
+    $numberarray = range(1, $n);
+
+    foreach ($numberarray as $num){
+        if ((($num % 3) == 0) && (($num % 5) == 0)){
+            echo "FizzBuzz ";
+        } elseif (($num % 3) == 0){
+            echo "Fizz ";
+        } elseif (($num % 5) == 0){
+            echo "Bozz ";
+        } elseif (($num % 7) == 0){
+            echo "Mazz";
+        }else {
             echo ($num . " ");
         };
     };
