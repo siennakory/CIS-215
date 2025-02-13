@@ -10,6 +10,10 @@ function main(){
     echo " .......... ";
 
     whileEvenArray(10);
+
+    echo " .......... ";
+
+    forEvenArray(10);
 };
 
 /*
