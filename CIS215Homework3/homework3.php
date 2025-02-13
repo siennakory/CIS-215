@@ -14,6 +14,10 @@ function main(){
     echo " .......... ";
 
     forEvenArray(10);
+
+    echo " .......... ";
+
+    randomValues();
 };
 
 /*
@@ -90,6 +94,14 @@ function forEvenArray($n){
         };
     };
     var_dump($evenarray);
+};
+
+function randomValues(){
+    $randomarray = array("apple", "orange", "banana", "pear", "peach");
+    $randomvalue = array_rand($randomarray, 2);
+    $endarray =  array($randomarray[$randomvalue[0]],$randomarray[$randomvalue[1]]);
+    var_dump($endarray);
+    return $endarray;
 };
 
 function functions(){
