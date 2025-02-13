@@ -12,7 +12,10 @@
         </header>
 
         <main>
-            <p>Thank you for completing our survey!</p>
+            <p>Thank you for completing our survey, 
+                <?php
+                    echo $_POST["name-input"];
+                ?>!</p>
         </main>
 
     </body>
