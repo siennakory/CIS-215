@@ -18,6 +18,11 @@ function main(){
     echo " .......... ";
 
     randomValues();
+
+    echo " .......... ";
+
+    $myarray = array("Justin", "Clancy", "Emily", "Justin", "David", "Bob");
+    arrayWipe($myarray, "Justin");
 };
 
 /*
@@ -114,8 +119,15 @@ function randomValues(){
     return $endarray;
 };
 
-function functions(){
-
+function arrayWipe($basearray, $wipe){
+    $wipedarray = array();
+    foreach ($basearray as $value){
+        if ($value != $wipe){
+            array_push($wipedarray, $value);
+        };
+    };
+    var_dump($wipedarray);
+    return $wipedarray;
 };
 
 function fizzBuzz(){
