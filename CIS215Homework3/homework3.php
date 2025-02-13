@@ -141,6 +141,12 @@ function arrayWipe($basearray, $wipe){
     return $wipedarray;
 };
 
+/*
+fizzBuzz echoes a series of numbers from 1 to $n, replacing multiples of 3 with Fizz, multiples of 5 with Buzz,
+and multiples of both with FizzBuzz. $numberarray is a range of numbers from one to the inputed variable of $n.
+A foreach loop iterates through that array checking for divisibility with an if block and mod operators, and echoes
+the appropriate output.
+*/
 function fizzBuzz($n){
     $numberarray = range(1, $n);
 
