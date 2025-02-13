@@ -96,9 +96,19 @@ function forEvenArray($n){
     var_dump($evenarray);
 };
 
+/*
+randomValues uses array_rand to randomly select two keys from an array of fruit names.
+These keys are then used to generate a second array ($endarray) with the values from the selected keys in the
+first array ($randomarray). The function then uses var_dump to display the generated array for testing.
+The function returns $endarray.
+*/
 function randomValues(){
     $randomarray = array("apple", "orange", "banana", "pear", "peach");
-    $randomvalue = array_rand($randomarray, 2);
+    $randomvalue = array_rand($randomarray, 2); 
+    /*
+    array_rand randomly selects a key from the array provided in the first argument as an integer,
+    or a number of keys dictated by the second argument as an array.
+    */
     $endarray =  array($randomarray[$randomvalue[0]],$randomarray[$randomvalue[1]]);
     var_dump($endarray);
     return $endarray;
