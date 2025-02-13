@@ -53,6 +53,12 @@ function forEchoTwoThree(){ #This was the easier of the two loop types for this 
     };
 };
 
+/*
+whileEvenArray uses a while loop to generate an array of all even numbers between 1 and $n.
+It uses the $count variable to check each number until it reaches $n, using array_push to add any that are
+divisible to $evenarray. The function then uses var_dump to display the generated array for testing.
+The function returns $evenarray.
+*/
 function whileEvenArray($n){
     $count = 1;
     $evenarray = array();
@@ -64,8 +70,16 @@ function whileEvenArray($n){
         $count += 1;
     };
     var_dump($evenarray);
+    return $evenarray;
 };
 
+/*
+forEvenArray uses a for loop to generate an array of all even numbers between 1 and $n.
+It uses range to generate an array of every variable from 1 to $n. It then uses a foreach
+type loop to iterate through and check each number in that array, using array_push to add any that are
+divisible by 2 to $evenarray. The function then uses var_dump to display the generated array for testing.
+The function returns $evenarray.
+*/
 function forEvenArray($n){
     $basearray = range(1, $n);
     $evenarray = array();
