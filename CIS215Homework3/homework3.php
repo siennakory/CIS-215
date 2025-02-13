@@ -1,6 +1,18 @@
 <?php
 /*
+CIS 215 Homework 3
+author: Sienna Korytkowski skorytk1@genesee.edu
 
+homework3.php contains the tasks outlined in the CIS 215 Homework 3 Assignment. It contains a main function
+containing calls to all other functions, and called at the end of the program. It also contains two functions
+using while and for loops respectively to echo numbers in an array that are divisible by 2 and/or 3. It also
+contains two functions using while and for loops respectively to generate and return an array of all even numbers from one
+to a given variable. It also contains a function using the array_rand built-in function to select two items from an
+array and return them in a second array. It also contains a function to wipe all instances of a variable from
+a provided array. It also contains a function to play FizzBuzz (echo all numbers in a a range from one to a given variable,
+replacing multiples of 3 with Fizz, multiples of 5 with Buzz, and multiples of both with FizzBuzz). It also contains a 
+modified version of the FizzBuzz function to demonstrate the original function's adaptability by adding a feature
+to replace multiples of 7 with Mazz and replace items previously replaced with Buzz with Bozz.
 */
 
 /*
