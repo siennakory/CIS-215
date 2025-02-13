@@ -4,7 +4,7 @@ $myarray = array();
 foreach($samplearray as $mycount){
     if(($mycount % 2) == 0){
         array_push($myarray, $mycount);
-    }
+    };
 };
 var_dump($myarray);
 ?>
