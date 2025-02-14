@@ -12,10 +12,16 @@
         </header>
 
         <main>
-            <p>Thank you for completing our survey, 
-                <?php
-                    echo $_POST["name-input"];
-                ?>!</p>
+            <?php
+                $age = $_POST["age-group"];
+                $name = $_POST["name-input"];
+
+                if ($age = "1-12"){
+                    print("<p>Aren't you a little young to be in this class?</p>");
+                } else {
+                    print("<p>Thank you for completing our survey, $name!</p>");
+                };
+            ?>
         </main>
 
     </body>
