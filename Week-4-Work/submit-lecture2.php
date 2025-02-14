@@ -17,7 +17,7 @@
                 $name = $_POST["name-input"];
 
                 if ($age = "1-12"){
-                    print("<p>Aren't you a little young to be in this class?</p>");
+                    print("<p>Thank you for completing our survey, $name, but aren't you a little young to be in this class?</p>");
                 } else {
                     print("<p>Thank you for completing our survey, $name!</p>");
                 };
