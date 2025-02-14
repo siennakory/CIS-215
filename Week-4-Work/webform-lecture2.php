@@ -62,7 +62,7 @@
                 <fieldset>
                     <legend>School and Work:</legend>
                     <div>
-                        <label for="education">Education:</label>
+                        <label for="education">Highest Level of Education:</label>
                         <select name="education" id="education">
                             <optgroup label="Incomplete">
                                 <option value="none">No Degree</option>
