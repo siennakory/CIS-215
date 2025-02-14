@@ -22,6 +22,21 @@
                     print("<p>Thank you for completing our survey, $name!</p>");
                 };
             ?>
+
+            <?php
+                $edu = $_POST["education"];
+
+                if ($edu == "college"){
+                    print("<p>A college graduate? Impressive!</p>");
+                };
+            ?>
+
+            <?php
+                $email = $_POST["email-input"];
+                $tel = $_POST["phone-input"];
+
+                print("<h2>Contact Information:</h2><p>email: $email   phone: $tel</p>");
+            ?>
         </main>
 
     </body>
