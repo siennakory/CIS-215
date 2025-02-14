@@ -73,7 +73,7 @@
 
                     <div>
                         <label for="work-history">Describe your Work History:</label>
-                        <textarea id="work-history" rows="4" cols="40">Type your answer here...</textarea>
+                        <textarea id="work-history" name="work-history" rows="4" cols="40">Type your answer here...</textarea>
                     </div>
                 </fieldset>
 
