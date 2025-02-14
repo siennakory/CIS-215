@@ -46,12 +46,12 @@
                     <legend>What is your favorite square number?</legend>
 
                     <?php
-
-
-                    echo "<div>
-                                <input type='radio' name='square-numbers-array' id'$num' value='$num' />
-                                <label for='$num'>$num</label>
-                            </div>";
+                        for ($num=1; $num<=100; $num=((sqrt($num)+1)*(sqrt($num)+1))){
+                            echo "<div>
+                                    <input type='radio' name='square-numbers-array' id'$num' value='$num' />
+                                    <label for='$num'>$num</label>
+                                </div>";
+                        };
                     ?>
                 </fieldset>
             </form>
