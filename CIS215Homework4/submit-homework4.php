@@ -28,7 +28,13 @@ result. Any ties are broken through random generation.
                 Return: none
                 */
                 function main(){
+                    greeting();
                     results(calc_points());
+                };
+
+                function greeting(){
+                    $name = $_POST["name"];
+                    print("<p>Thanks for taking our quiz, $name!</p>");
                 };
 
                 /*
@@ -123,13 +129,13 @@ result. Any ties are broken through random generation.
                 */
                 function print_results($winner){
                     if ($winner == "Te"){
-                        print("<p>Your ideal superpower is TELEPATHY!</p>");
+                        print("<p>Your ideal superpower is TELEPATHY.</p> <p>You seek to understand and be understood by the world around you.</p>");
                     } elseif ($winner == "St"){
-                        print("<p>Your ideal superpower is SUPER STRENGTH!</p>");
+                        print("<p>Your ideal superpower is SUPER STRENGTH.</p> <p>You seek the strength to face life's challenges head on.</p>");
                     } elseif ($winner == "Fl"){
-                        print("<p>Your ideal superpower is FLYING!</p>");
+                        print("<p>Your ideal superpower is FLYING.</p> <p>You seek an escape from the monotony of daily life.</p>");
                     } elseif ($winner == "Sh"){
-                        print("<p>Your ideal superpower is SHAPESHIFTER!</p>");
+                        print("<p>Your ideal superpower is SHAPESHIFTER.</p> <p>You seek to the ability to adapt and change.</p>");
                     };
                 };
 
