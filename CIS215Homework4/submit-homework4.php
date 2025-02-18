@@ -100,7 +100,7 @@ result. Any ties are broken through random generation.
                     $winning_value = $options[0];#because of rsort the first index of the array will be the highest value
                     $winning_array = array();
 
-                    #this if block adds a value corresponding to a response to an array to check for ties
+                    #this if block adds a value corresponding to a result to an array to check for ties
                     if ($telepathy == $winning_value){
                         array_push($winning_array, "Te");
                     };
