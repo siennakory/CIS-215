@@ -12,7 +12,16 @@
         </header>
 
         <main>
-            
+            <?php
+                $quiz_answers = array();
+                $count = 1;
+
+                while ($count <= 8){
+                    $answer = $_POST["question-$count"];
+                    array_push($quiz_answers, $answer);
+                    $count++;
+                };
+            ?>
         </main>
 
     </body>
