@@ -1,0 +1,61 @@
+What is you ideal superpower?
+
+Possible Results:
+Flying
+Super Strength
+Telepathy
+Shapshifting
+
+Each result has its own variable that gains points with attributed quiz answers.
+Highest variable is user result.
+
+8 questions - 4 options for each:
+
+1- Pick an animal:
++ Rat - +1Te
++ Bear - +1St
++ Eagle - +1Fl
++ I don't like any of these animals. - +Sh
+
+2- What skill would serve you best in a fight?
++ You need to understand your opponent and strategize. - +1Te
++ You need the strength to overpower your opponent. - +1St
++ You need to stay out of reach of your opponent. - +1Fl
++ You need to be unpredictable and keep your opponent guessing. - +1Sh
+
+3- What is your favorite subject in school?
++ Psychology - +1Te
++ P.E. - +1St
++ Art - +1Fl
++ I never liked picking a favorite subject. - +1Sh
+
+4- What is one thing you stuggle with.
++ I wish I could understand people better and make myself understood. - +1Te
++ I wish I had the strength to help the people I care about and keep them safe. - +1St
++ I wish I could escape my problems and feel free from the weight of my responsibilities. - +1Fl
++ I wish I had the power to change and adapt more easily. - +1Sh
+
+5- What do you like most about yourself?
++ I like my ability to think and problem solve. - +1Te
++ I like my physical strength. - +1St
++ I like my freespirited personality. - +1Fl
++ I like my imagination and creativity. - +1Sh
+
+6- What is your favorite sport?
++ Chess - +1Te
++ Boxing - +1St
++ Track - +1Fl
++ Swimming - +Sh
+
+7- What is your favorite art form?
++ Pastels - +1Te
++ Sculpture - +1St
++ Painting - +1Fl
++ Pencil Sketching - +1Sh
+
+8- Which response are you hoping for?
++ Telepathy - +1 Te
++ Super Strength - +1St
++ Flying - +1Fl
++ Shapeshifter - +1Sh
++ I don't want to influence my results at all. - no point added
