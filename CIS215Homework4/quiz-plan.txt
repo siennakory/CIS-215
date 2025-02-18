@@ -47,7 +47,7 @@ Highest variable is user result.
 + Track - +1Fl
 + Swimming - +Sh
 
-7- What is your favorite art form?
+7- Which of these art mediums would you pick?
 + Pastels - +1Te
 + Sculpture - +1St
 + Painting - +1Fl
