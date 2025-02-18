@@ -35,11 +35,11 @@ Highest variable is user result.
 + I wish I could escape my problems and feel free from the weight of my responsibilities. - +1Fl
 + I wish I had the power to change and adapt more easily. - +1Sh
 
-5- What do you like most about yourself?
-+ I like my ability to think and problem solve. - +1Te
-+ I like my physical strength. - +1St
-+ I like my freespirited personality. - +1Fl
-+ I like my imagination and creativity. - +1Sh
+5- What do you value most?
++ Intelligence - +1Te
++ Physical Strength - +1St
++ Freedom - +1Fl
++ Creativity - +1Sh
 
 6- Which of these sports would you pick?
 + Chess - +1Te
