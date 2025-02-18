@@ -32,6 +32,13 @@ result. Any ties are broken through random generation.
                     results(calc_points());
                 };
 
+                /*
+                greeting retrieves the response for the name input in the homework4.php
+                form. It then prints an html paragraph element thanking the user by name
+                for taking the quiz.
+                Parameters: none
+                Return: none
+                */
                 function greeting(){
                     $name = $_POST["name"];
                     print("<p>Thanks for taking our quiz, $name!</p>");
@@ -126,6 +133,8 @@ result. Any ties are broken through random generation.
                 /*
                 print_results checks which result the $winner variable provided by the results function
                 corresponds to. It then prints a paragraph element informing the user of the results.
+                Parameters: none
+                Return: none
                 */
                 function print_results($winner){
                     if ($winner == "Te"){
