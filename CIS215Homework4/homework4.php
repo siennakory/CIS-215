@@ -28,7 +28,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>Pick an animal:</legend>
 
                             <div>
-                                <input type="radio" name="question-1" id="Te" value="Te" />
+                                <input type="radio" name="question-1" id="Te" value="Te" required />
                                 <label for="Te">Rat</label>
                             </div>
                             <div>
@@ -51,7 +51,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>What skill would serve you best in a fight?</legend>
 
                             <div>
-                                <input type="radio" name="question-2" id="Te" value="Te" />
+                                <input type="radio" name="question-2" id="Te" value="Te" required />
                                 <label for="Te">You need to understand your opponent and strategize.</label>
                             </div>
                             <div>
@@ -74,7 +74,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>What is your favorite subject in school?</legend>
 
                             <div>
-                                <input type="radio" name="question-3" id="Te" value="Te" />
+                                <input type="radio" name="question-3" id="Te" value="Te" required />
                                 <label for="Te">Psychology</label>
                             </div>
                             <div>
@@ -97,7 +97,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>What is one thing you stuggle with?</legend>
 
                             <div>
-                                <input type="radio" name="question-4" id="Te" value="Te" />
+                                <input type="radio" name="question-4" id="Te" value="Te" required />
                                 <label for="Te">I wish I could understand people better and make myself understood.</label>
                             </div>
                             <div>
@@ -120,7 +120,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>What do you value most?</legend>
 
                             <div>
-                                <input type="radio" name="question-5" id="Te" value="Te" />
+                                <input type="radio" name="question-5" id="Te" value="Te" required />
                                 <label for="Te">Intelligence</label>
                             </div>
                             <div>
@@ -143,7 +143,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>Which of these sports would you pick?</legend>
 
                             <div>
-                                <input type="radio" name="question-6" id="Te" value="Te" />
+                                <input type="radio" name="question-6" id="Te" value="Te" required />
                                 <label for="Te">Chess</label>
                             </div>
                             <div>
@@ -166,7 +166,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>Which of these art mediums would you pick?</legend>
 
                             <div>
-                                <input type="radio" name="question-7" id="Te" value="Te" />
+                                <input type="radio" name="question-7" id="Te" value="Te" required />
                                 <label for="Te">Pastels</label>
                             </div>
                             <div>
@@ -189,7 +189,7 @@ sends the user to submit-homework4.php where their result will be determined.
                             <legend>Which response are you hoping for?</legend>
 
                             <div>
-                                <input type="radio" name="question-8" id="Te" value="Te" />
+                                <input type="radio" name="question-8" id="Te" value="Te" required />
                                 <label for="Te">Telepathy</label>
                             </div>
                             <div>
