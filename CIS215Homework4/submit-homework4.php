@@ -1,3 +1,12 @@
+<!-- 
+CIS 215 Homework 4 Submission Page
+author: Sienna Korytkowski skorytk1@genesee.edu
+
+submit-homework4.php is the submission page for the form in the homework4.php file. It collects posted
+radio button response values and pushes them to an array. This array is then iterated through to determine
+point values for each possible result. These results are then processed to determine the highest scoring
+result. Any ties are broken through random generation.
+-->
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -13,11 +22,21 @@
 
         <main>
             <?php
-                
+                /*
+                main calls the results function with calc_points as an argument.
+                Parameters: none
+                Return: none
+                */
                 function main(){
                     results(calc_points());
                 };
 
+                /*
+                calc_points retrieves each response from the 8 radio button inputs in the homework4.php
+                form. It then adds each value to an array. The function then returns that array.
+                Parameters: none
+                Return: $quiz_answers
+                */
                 function calc_points(){
                     $quiz_answers = array();
                     $count = 1;
@@ -31,6 +50,18 @@
                     return $quiz_answers;
                 };
 
+                /*
+                results iterates through the array of responses and assigns each result option a point
+                value based on how many times an answer associated with that result appears in the array.
+                It then places those point values in to an array, and sorts the array in descending order
+                using the rsort array function. It checks which result variables are equal to the value
+                at index 0 (the highest value), and adds each to an array. If there is only one value in
+                the array, there is no tie and it calls the print_results function with that value as the
+                argument. If there are multiple values it selects a randomly generated index from the array
+                to break the tie, and calls the print_results function with that value as the argument.
+                Parameters: $answers
+                Return: none
+                */
                 function results($answers){
                     $telepathy = 0;
                     $strength = 0;
@@ -51,11 +82,12 @@
 
                     $options = array($telepathy, $strength, $flying, $shifter);
 
-                    rsort($options);
+                    rsort($options); #rsort is an array function that sorts an array in descending order (highest to lowest)
 
-                    $winning_value = $options[0];
+                    $winning_value = $options[0];#because of rsort the first index of the array will be the highest value
                     $winning_array = array();
 
+                    #this if block adds a value corresponding to a response to an array to check for ties
                     if ($telepathy == $winning_value){
                         array_push($winning_array, "Te");
                     };
@@ -77,13 +109,18 @@
                     if ($count == 0){
                         $winner = $winning_array[0];
                         print_results($winner);
-                    } else {
-                        $count--;
-                        $winner = $winning_array[rand(0, $count)];
+                    } else { #this else statement occurs if there is a tie for the highest value, and breaks it with random generation
+                        $count--; #this value is decreased to make it equal to the last index rather than the number of indexes (0 indexing)
+                        $winner = $winning_array[rand(0, $count)]; 
+                        #rand is a function that generates a random number within a provided range, I used it to generated a random index.
                         print_results($winner);
                     };
                 };
 
+                /*
+                print_results checks which result the $winner variable provided by the results function
+                corresponds to. It then prints a paragraph element informing the user of the results.
+                */
                 function print_results($winner){
                     if ($winner == "Te"){
                         print("<p>Your ideal superpower is TELEPATHY!</p>");

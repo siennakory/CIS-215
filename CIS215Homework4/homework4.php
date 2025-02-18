@@ -1,3 +1,11 @@
+<!-- 
+CIS 215 Homework 4
+author: Sienna Korytkowski skorytk1@genesee.edu
+
+homework4.php generates the webpage and form for a  superpower personality quiz. This quiz consists of 8 questions,
+each collecting a required radio button response. The responses are submitted using the POST method, and the form action 
+sends the user to submit-homework4.php where their result will be determined.
+-->
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
