@@ -23,7 +23,7 @@ result. Any ties are broken through random generation.
         <main>
             <?php
                 /*
-                main calls the results function with calc_points as an argument.
+                main calls the greeting function and results function with calc_points as an argument.
                 Parameters: none
                 Return: none
                 */
