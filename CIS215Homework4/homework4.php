@@ -22,6 +22,10 @@ sends the user to submit-homework4.php where their result will be determined.
 
         <main>
             <form action="submit-homework4.php" method="post" class="survey">
+                <div>
+                    <label for="name">Name:</label>
+                    <input name="name" type="text" id="name" />
+                </div>
                 <ol>
                     <li>
                         <fieldset> <!-- Question 1 -->
