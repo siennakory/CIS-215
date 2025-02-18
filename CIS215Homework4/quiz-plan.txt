@@ -26,8 +26,8 @@ Highest variable is user result.
 3- What is your favorite subject in school?
 + Psychology - +1Te
 + P.E. - +1St
-+ Art - +1Fl
-+ I never liked picking a favorite subject. - +1Sh
++ English - +1Fl
++ Art - +1Sh
 
 4- What is one thing you stuggle with.
 + I wish I could understand people better and make myself understood. - +1Te
