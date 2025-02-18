@@ -41,7 +41,7 @@ Highest variable is user result.
 + I like my freespirited personality. - +1Fl
 + I like my imagination and creativity. - +1Sh
 
-6- What is your favorite sport?
+6- Which of these sports would you pick?
 + Chess - +1Te
 + Boxing - +1St
 + Track - +1Fl
