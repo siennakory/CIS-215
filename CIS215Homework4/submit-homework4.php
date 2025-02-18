@@ -6,6 +6,12 @@ submit-homework4.php is the submission page for the form in the homework4.php fi
 radio button response values and pushes them to an array. This array is then iterated through to determine
 point values for each possible result. These results are then processed to determine the highest scoring
 result. Any ties are broken through random generation.
+
+Throughout the file the string values used to represent the results are generally listed as the first two letters of the result:
+Telepathy = Te
+Super Strengh = (St)
+Flying = (Fl)
+Shapeshifter = (Sh)
 -->
 <!DOCTYPE html>
 <html lang="en-US">
@@ -48,7 +54,7 @@ result. Any ties are broken through random generation.
                 calc_points retrieves each response from the 8 radio button inputs in the homework4.php
                 form. It then adds each value to an array. The function then returns that array.
                 Parameters: none
-                Return: $quiz_answers
+                Return: $quiz_answers(array)
                 */
                 function calc_points(){
                     $quiz_answers = array();
@@ -72,7 +78,7 @@ result. Any ties are broken through random generation.
                 the array, there is no tie and it calls the print_results function with that value as the
                 argument. If there are multiple values it selects a randomly generated index from the array
                 to break the tie, and calls the print_results function with that value as the argument.
-                Parameters: $answers
+                Parameters: $answers(array)
                 Return: none
                 */
                 function results($answers){
@@ -133,7 +139,7 @@ result. Any ties are broken through random generation.
                 /*
                 print_results checks which result the $winner variable provided by the results function
                 corresponds to. It then prints a paragraph element informing the user of the results.
-                Parameters: none
+                Parameters: $winner(str)
                 Return: none
                 */
                 function print_results($winner){
