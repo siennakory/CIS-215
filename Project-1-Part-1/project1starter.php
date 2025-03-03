@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <title>Survey: Survey Name</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Survey: Product Review</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
     </head>
     <body>
         <main>
     <!-- TODO: Fix all bugs/poor practice in the form -->
-            <form action="" method="post" class="survey">
+            <form action="submit.php" method="post" class="survey">
 
                 <div>
                     <label for="email">Enter your email: </label>
@@ -35,7 +37,7 @@
                             <label for="18-22">18-22 </label>
                         </div>
                         <div>
-                           <input type="radio" name="age" id="23-27" value="23-27">
+                            <input type="radio" name="age" id="23-27" value="23-27">
                             <label for="23-27">23-27 </label> 
                         </div>
                         <div>
@@ -51,7 +53,7 @@
                             <label for="38-42">38-42 </label>
                         </div>
                         <div>
-                           <input type="radio" name="age" id="43-47" value="43-47">
+                            <input type="radio" name="age" id="43-47" value="43-47">
                             <label for="43-47">43-47 </label> 
                         </div>
                         <div>
@@ -94,7 +96,7 @@
 
             </form>
         </main>
-<!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
+    <!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
 
     </body>
 </html>
