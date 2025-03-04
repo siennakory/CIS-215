@@ -26,7 +26,9 @@
 
                     if (password_verify($password, $pwhash)){
                         print("<p>Password is valid!</p>")
-                    };
+                    } else {
+                        print("<p>Password is invalid. :(</p>")
+                    }
                 };
 
             ?>
