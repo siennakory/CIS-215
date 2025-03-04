@@ -17,16 +17,7 @@
             <?php
                 function main(){
                     if (pwVerify() == True){
-                        valEmail();
-                        valPhone();
-                        valAge();
-                        valGender();
-                        valReview();
-
-                        /*
-                        if (validateInputs() == True){
-                            print("<p>All inputs are valid!</p>")
-                        };*/
+                        
                     };
                 };
                 
@@ -57,7 +48,7 @@
                         print("<p>Email is valid!</p>");
                         return True;
                     } else {
-                        print("<p>Email is not valid. :(</p>");
+                        print("<p>Email is invalid. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
                     };
                 };
@@ -68,7 +59,7 @@
                         print("<p>Phone is valid!</p>");
                         return True;
                     } else {
-                        print("<p>Phone is not valid. :(</p>");
+                        print("<p>Phone Number is invalid. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
                     };
                 };
@@ -79,7 +70,7 @@
                         print("<p>Age is valid!</p>");
                         return True;
                     } else {
-                        print("<p>Age is not valid. :(</p>");
+                        print("<p>Age is empty. :(</p> <p>Plase return to the form and select an option.</p>");
                         return False;
                     };
                 };
@@ -90,19 +81,35 @@
                         print("<p>Gender is valid!</p>");
                         return True;
                     } else {
-                        print("<p>Gender is not valid. :(</p>");
+                        print("<p>Gender is empty. :(</p> <p>Plase return to the form and select an option.</p>");
                         return False;
                     };
                 };
 
                 function valReview(){
                     $review = $_POST["review"];
-                    if ((strlen($review) <= 100) AND (strlen($review) >= 10)){
+                    if ((strlen($review) <= 100) AND (strlen($review) >= 10)) {
                         print("<p>Review is valid!</p>");
                         return True;
-                    } else {
-                        print("<p>Review is not valid. :(</p>");
+                    } elseif (strlen($review > 100)) {
+                        print("<p>Review is too long. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
+                    } elseif (strlen($review) < 10) {
+                        print("<p>Review is too short. :(</p> <p>Plase return to the form and try again.</p>");
+                    };
+                };
+
+                function valInputs(){
+                    if valEmail(){
+                        if valPhone(){
+                            if valAge(){
+                                if valGender(){
+                                    if valReview(){
+                                        return True;
+                                    };
+                                };
+                            };
+                        };
                     };
                 };
 
