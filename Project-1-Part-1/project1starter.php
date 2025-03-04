@@ -20,14 +20,14 @@
                     <input type="email" name="email" id="email">
                 </div>
                 
-                <div> <!-- added question -->
-                    <label for="phone">Phone Number: </label>
-                    <input type="tel" name="phone" id="phone"/>
-                </div>
-                
                 <div>
                     <label for="pw">Enter your password: </label>
                     <input type="password" name="pw" id="pw">
+                </div>
+
+                <div> <!-- added question -->
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="phone" id="phone"/>
                 </div>
                 
                 <div>
