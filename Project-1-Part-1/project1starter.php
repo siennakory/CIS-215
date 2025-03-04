@@ -3,11 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Survey: Product Review</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
+        <title>Survey: Product Review</title>
     </head>
     <body>
         <main>
-    <!-- TODO: Fix all bugs/poor practice in the form -->
             <form action="submit.php" method="post" class="survey">
 
                 <div>
@@ -91,12 +90,22 @@
                     </select>
                 </div>
                 
+                <div>
+                    <label for="order-num">Order Number: </label>
+                    <input type="number" name="order-num" id="order-num" minlength="8" maxlength="8"/> 
+<!-- minlength and maxlength specify the number of characters allowed an minimum and maximum for an html input element -->
+                </div>
 
-                <!-- TODO: Add your own survey questions -->
+                <div>
+                    <label for="review">Tell us about your experience ordering from us!</label>
+                    <textarea id="review" name="review" rows="4" cols="40" minlength="10" maxlength="100">Type your answer here...</textarea>
+                </div>
 
+                <div>
+                    <button type="submit" name="survey-submit" id="survey-submit">Submit</button>
+                </div>
             </form>
         </main>
-    <!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
 
     </body>
 </html>
