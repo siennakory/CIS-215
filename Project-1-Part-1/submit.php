@@ -8,7 +8,10 @@
     </head>
     <body>
 
-        <header></header>
+        <header>
+            <h1>Submission Page</h1>
+            <p>Thank you for your review!</p>
+        </header>
 
         <main>
             <?php
@@ -16,6 +19,9 @@
                     if (pwVerify() == True){
                         valEmail();
                         valPhone();
+                        valAge();
+                        valGender();
+                        valReview();
 
                         /*
                         if (validateInputs() == True){
@@ -40,7 +46,7 @@
                         print("<p>Password is invalid. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
                     } else {
-                        print("<p>Yippee!</p>");
+                        print("<p>Password is valid!</p>");
                         return True;
                     };
                 };
@@ -78,7 +84,6 @@
                     };
                 };
 
-                
                 function valGender(){
                     $gender = $_POST["gender"];
                     if ($gender > 0){
@@ -92,7 +97,7 @@
 
                 function valReview(){
                     $review = $_POST["review"];
-                    if (100 >= strlen() >= 10){
+                    if ((strlen($review) <= 100) AND (strlen($review) >= 10)){
                         print("<p>Review is valid!</p>");
                         return True;
                     } else {
