@@ -14,9 +14,13 @@
             <?php
                 function main(){
                     if (pwVerify() == True){
+                        valEmail();
+                        valPhone();
+
+                        /*
                         if (validateInputs() == True){
                             print("<p>All inputs are valid!</p>")
-                        };
+                        };*/
                     };
                 };
                 
@@ -36,23 +40,34 @@
                         print("<p>Password is invalid. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
                     } else {
+                        print("<p>Yippee!</p>");
                         return True;
                     };
                 };
 
                 function valEmail(){
                     $email = $_POST["email"];
-                    if (str_contains("@") AND str_ends_with((".com") OR (".org"))){
+                    if (str_ends_with($email, "@genesee.edu")){
+                        print("<p>Email is valid!</p>");
                         return True;
                     } else {
-                        
-                    }
+                        print("<p>Email is not valid. :(</p>");
+                        return False;
+                    };
                 };
 
                 function valPhone(){
                     $phone = $_POST["phone"];
+                    if (is_numeric($phone) AND (strlen($phone) == 10)){
+                        print("<p>Phone is valid!</p>");
+                        return True;
+                    } else {
+                        print("<p>Phone is not valid. :(</p>");
+                        return False;
+                    };
                 };
 
+                /*
                 function valAge(){
                     $age = $_POST["age"];
                 };
@@ -78,6 +93,7 @@
                         };
                     };
                 };
+                */
 
                 main();
 
