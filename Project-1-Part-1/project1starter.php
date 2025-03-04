@@ -16,7 +16,7 @@
             <form action="submit.php" method="post" class="survey">
 
                 <div>
-                    <label for="email">Enter your email: </label>
+                    <label for="email">Enter your email: (@genesee.edu) </label>
                     <input type="email" name="email" id="email">
                 </div>
                 
