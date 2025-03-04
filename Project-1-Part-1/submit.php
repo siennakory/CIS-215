@@ -17,7 +17,8 @@
             <?php
                 function main(){
                     if (pwVerify() == True){
-                        
+                        print("<p>All inputs are valid!</p>")
+                        /* retest input validation */
                     };
                 };
                 
