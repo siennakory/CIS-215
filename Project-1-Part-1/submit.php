@@ -13,7 +13,7 @@
         <main>
             <?php
                 function main(){
-                    pwVerify()
+                    pwVerify();
                 };
                 
                 /*
@@ -25,11 +25,13 @@
                     $password = $_POST["pw"];
 
                     if (password_verify($password, $pwhash)){
-                        print("<p>Password is valid!</p>")
+                        print("<p>Password is valid!</p>");
                     } else {
-                        print("<p>Password is invalid. :(</p>")
+                        print("<p>Password is invalid. :(</p>");
                     }
                 };
+
+                main();
 
             ?>
         </main>
