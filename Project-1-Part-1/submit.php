@@ -16,9 +16,10 @@
         <main>
             <?php
                 function main(){
-                    if (pwVerify() == True){
-                        print("<p>All inputs are valid!</p>")
-                        /* retest input validation */
+                    if (pwVerify()){
+                        if (valInputs()){
+                            print("<p>All inputs are valid!</p>");
+                        };
                     };
                 };
                 
@@ -101,11 +102,11 @@
                 };
 
                 function valInputs(){
-                    if valEmail(){
-                        if valPhone(){
-                            if valAge(){
-                                if valGender(){
-                                    if valReview(){
+                    if (valEmail()){
+                        if (valPhone()){
+                            if (valAge()){
+                                if (valGender()){
+                                    if (valReview()){
                                         return True;
                                     };
                                 };
