@@ -67,33 +67,39 @@
                     };
                 };
 
-                /*
                 function valAge(){
                     $age = $_POST["age"];
+                    if ($age > 0){
+                        print("<p>Age is valid!</p>");
+                        return True;
+                    } else {
+                        print("<p>Age is not valid. :(</p>");
+                        return False;
+                    };
                 };
 
+                
                 function valGender(){
                     $gender = $_POST["gender"];
+                    if ($gender > 0){
+                        print("<p>Gender is valid!</p>");
+                        return True;
+                    } else {
+                        print("<p>Gender is not valid. :(</p>");
+                        return False;
+                    };
                 };
 
                 function valReview(){
                     $review = $_POST["review"];
-                };
-
-                function valInputs(){
-                    if (valEmail() == True){
-                        if (valPhone() == True){
-                            if(valAge() == True){
-                                if (valGender() == True){
-                                    if (valReview() == True){
-                                        return True;
-                                    };
-                                };
-                            };
-                        };
+                    if (100 >= strlen() >= 10){
+                        print("<p>Review is valid!</p>");
+                        return True;
+                    } else {
+                        print("<p>Review is not valid. :(</p>");
+                        return False;
                     };
                 };
-                */
 
                 main();
 
