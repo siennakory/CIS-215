@@ -6,12 +6,23 @@
         <title>Survey: Product Review</title>
     </head>
     <body>
+
+        <header>
+            <h1>Product Review</h1>
+            <p>Let us know how we did!</p>
+        </header>
+
         <main>
             <form action="submit.php" method="post" class="survey">
 
                 <div>
                     <label for="email">Enter your email: </label>
                     <input type="email" name="email" id="email">
+                </div>
+                
+                <div> <!-- added question -->
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="phone" id="phone"/>
                 </div>
                 
                 <div>
@@ -89,21 +100,15 @@
                         <option value="o">Choose not to say/Other</option>
                     </select>
                 </div>
-                
-                <div>
-                    <label for="order-num">Order Number: </label>
-                    <input type="number" name="order-num" id="order-num" minlength="8" maxlength="8"/> 
-<!-- minlength and maxlength specify the number of characters allowed an minimum and maximum for an html input element -->
-                </div>
 
-                <div>
+                <div> <!-- added question -->
                     <label for="review">Tell us about your experience ordering from us!</label>
                     <div>
                         <textarea id="review" name="review" rows="4" cols="40" minlength="10" maxlength="100">Type your answer here...</textarea>
                     </div>
                 </div>
 
-                <div>
+                <div> 
                     <button type="submit" name="survey-submit" id="survey-submit">Submit</button>
                 </div>
             </form>
