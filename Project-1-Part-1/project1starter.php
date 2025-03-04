@@ -98,7 +98,9 @@
 
                 <div>
                     <label for="review">Tell us about your experience ordering from us!</label>
-                    <textarea id="review" name="review" rows="4" cols="40" minlength="10" maxlength="100">Type your answer here...</textarea>
+                    <div>
+                        <textarea id="review" name="review" rows="4" cols="40" minlength="10" maxlength="100">Type your answer here...</textarea>
+                    </div>
                 </div>
 
                 <div>
