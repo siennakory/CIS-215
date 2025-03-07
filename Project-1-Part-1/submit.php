@@ -19,6 +19,7 @@
                     if (pwVerify()){
                         if (valInputs()){
                             print("<p>All inputs are valid!</p>");
+                            addData();
                         };
                     };
                 };
@@ -148,11 +149,19 @@
                 };
 
                 function addData(){
+                    require('dbconfig.php');
+
                     $email = $_POST["email"];
                     $phone = $_POST["phone"];
                     $age = $_POST["age"];
                     $gender = $_POST["gender"];
                     $review = $_POST["review"];
+
+                    $db = connectDB();
+
+                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, review) VALUES (?, ?, ?, ?, ?);");
+
+                    $prepared_stat->execute(array($email, $phone, $age, $gender, $review));
 
                 };
 
