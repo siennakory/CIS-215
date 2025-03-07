@@ -10,7 +10,6 @@
 
         <header>
             <h1>Submission Page</h1>
-            <p>Thank you for your review!</p>
         </header>
 
         <main>
@@ -18,8 +17,9 @@
                 function main(){
                     if (pwVerify()){
                         if (valInputs()){
-                            print("<p>All inputs are valid!</p>");
                             addData();
+                            print("<p>Thank you for your review! Your responses have been saved.</p>");
+                            print("<p><a href="data.php">Check out our other reviews!</a></p>");
                         };
                     };
                 };
@@ -128,13 +128,25 @@
                     };
                 };
 
+                function valStars(){
+                    $gender = $_POST["stars"];
+                    if ($gender > 0){
+                        return True;
+                    } else {
+                        print("<p>Rating is empty. :(</p> <p>Plase return to the form and select an option.</p>");
+                        return False;
+                    };
+                };
+
                 function valInputs(){
                     if (valEmail()){
                         if (valPhone()){
                             if (valAge()){
                                 if (valGender()){
                                     if (valReview()){
-                                        return True;
+                                        if (valStars()){
+                                            return True;
+                                        };
                                     };
                                 };
                             };
@@ -168,8 +180,8 @@
                         $prepared_stat->execute(array($email));
                     };
                     
-                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, review) VALUES (?, ?, ?, ?, ?);");
-                    $prepared_stat->execute(array($email, $phone, $age, $gender, $review));
+                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, stars, review) VALUES (?, ?, ?, ?, ?, ?);");
+                    $prepared_stat->execute(array($email, $phone, $age, $gender, $stars, $review));
                     
 
                 };
