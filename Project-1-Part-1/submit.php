@@ -19,7 +19,7 @@
                         if (valInputs()){
                             addData();
                             print("<p>Thank you for your review! Your responses have been saved.</p>");
-                            print("<p><a href="data.php">Check out our other reviews!</a></p>");
+                            print("<p><a href='data.php'>Check out our other reviews!</a></p>");
                         };
                     };
                 };
@@ -129,8 +129,8 @@
                 };
 
                 function valStars(){
-                    $gender = $_POST["stars"];
-                    if ($gender > 0){
+                    $stars = $_POST["stars"];
+                    if ($stars > 0){
                         return True;
                     } else {
                         print("<p>Rating is empty. :(</p> <p>Plase return to the form and select an option.</p>");
@@ -175,7 +175,6 @@
                     };
 
                     if (in_array($email, $email_array)){
-                        print("it works");
                         $prepared_stat = $db->prepare("DELETE FROM ProductReview WHERE email=?");
                         $prepared_stat->execute(array($email));
                     };
