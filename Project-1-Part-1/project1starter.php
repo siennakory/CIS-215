@@ -104,7 +104,7 @@
                 <div>
                 <label for="stars">How would you rate us out of 5 stars</label>
                     <select name="stars" id="stars">
-                        <option value="0">0</option>
+                        <option value="none">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
