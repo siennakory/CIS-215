@@ -101,18 +101,6 @@
                     </select>
                 </div>
 
-                <div>
-                <label for="stars">How would you rate us out of 5 stars</label>
-                    <select name="stars" id="stars">
-                        <option value="none">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-
                 <div> <!-- added question -->
                     <label for="review">Tell us about your experience ordering from us!</label>
                     <div>
