@@ -44,6 +44,12 @@
                     };
                 };
 
+                /*
+                Tested Inputs:
+                valid email: check that it registers properly
+                emails not from genesee.edu: make sure they are not valid
+                inputs that are not emails: make sure they are not valid
+                */
                 function valEmail(){
                     $email = $_POST["email"];
                     if (str_ends_with($email, "@genesee.edu")){
@@ -55,6 +61,14 @@
                     };
                 };
 
+                /*
+                Tested Inputs:
+                valid phone number: check that it registers properly
+                too long phone number: check that it catches it
+                too short phone number: check that it catches it
+                letters: check that it only accepts numbers
+                with special characters: check that it only accepts numbers
+                */
                 function valPhone(){
                     $phone = $_POST["phone"];
                     if (is_numeric($phone) AND (strlen($phone) == 10)){
@@ -66,6 +80,11 @@
                     };
                 };
 
+                /*
+                Tested Inputs:
+                valid selection: check that it registers properly
+                no selection: check that it does not accept no selection
+                */
                 function valAge(){
                     $age = $_POST["age"];
                     if ($age > 0){
@@ -77,6 +96,11 @@
                     };
                 };
 
+                /*
+                Tested Inputs:
+                valid selection: check that it registers properly
+                no selection: check that it does not accept no selection
+                */
                 function valGender(){
                     $gender = $_POST["gender"];
                     if ($gender > 0){
@@ -88,6 +112,14 @@
                     };
                 };
 
+                /*
+                Tested Inputs:
+                valid length response: check that it registers correctly
+                too long response: check that it catches it
+                too short response: check that it catches it
+                10 character response: check that it is included
+                100 character response: check that it is included
+                */
                 function valReview(){
                     $review = $_POST["review"];
                     if ((strlen($review) <= 100) AND (strlen($review) >= 10)) {
