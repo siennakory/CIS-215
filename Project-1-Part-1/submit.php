@@ -40,7 +40,6 @@
                         print("<p>Password is invalid. :(</p> <p>Plase return to the form and try again.</p>");
                         return False;
                     } else {
-                        print("<p>Password is valid!</p>");
                         return True;
                     };
                 };
@@ -54,7 +53,6 @@
                 function valEmail(){
                     $email = $_POST["email"];
                     if (str_ends_with($email, "@genesee.edu")){
-                        print("<p>Email is valid!</p>");
                         return True;
                     } else {
                         print("<p>Email is invalid. :(</p> <p>Plase return to the form and try again.</p>");
@@ -73,7 +71,6 @@
                 function valPhone(){
                     $phone = $_POST["phone"];
                     if (is_numeric($phone) AND (strlen($phone) == 10)){
-                        print("<p>Phone is valid!</p>");
                         return True;
                     } else {
                         print("<p>Phone Number is invalid. :(</p> <p>Plase return to the form and try again.</p>");
@@ -89,7 +86,6 @@
                 function valAge(){
                     $age = $_POST["age"];
                     if ($age > 0){
-                        print("<p>Age is valid!</p>");
                         return True;
                     } else {
                         print("<p>Age is empty. :(</p> <p>Plase return to the form and select an option.</p>");
@@ -105,7 +101,6 @@
                 function valGender(){
                     $gender = $_POST["gender"];
                     if ($gender > 0){
-                        print("<p>Gender is valid!</p>");
                         return True;
                     } else {
                         print("<p>Gender is empty. :(</p> <p>Plase return to the form and select an option.</p>");
@@ -124,7 +119,6 @@
                 function valReview(){
                     $review = $_POST["review"];
                     if ((strlen($review) <= 100) AND (strlen($review) >= 10)) {
-                        print("<p>Review is valid!</p>");
                         return True;
                     } elseif (strlen($review > 100)) {
                         print("<p>Review is too long. :(</p> <p>Plase return to the form and try again.</p>");
@@ -160,9 +154,7 @@
                     $db = connectDB();
 
                     $select_emails = $db->prepare("SELECT email FROM ProductReview");
-
                     $select_emails->execute();
-
                     $select_array = $select_emails->fetchAll();
                     $email_array = array();
 
@@ -177,7 +169,6 @@
                     };
                     
                     $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, review) VALUES (?, ?, ?, ?, ?);");
-
                     $prepared_stat->execute(array($email, $phone, $age, $gender, $review));
                     
 
