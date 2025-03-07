@@ -159,9 +159,27 @@
 
                     $db = connectDB();
 
+                    $select_emails = $db->prepare("SELECT email FROM ProductReview");
+
+                    $select_emails->execute();
+
+                    $select_array = $select_emails->fetchAll();
+                    $email_array = array();
+
+                    foreach ($select_array as $array){
+                        array_push($email_array, $array["email"]);
+                    };
+
+                    if (in_array($email, $email_array)){
+                        print("it works");
+                        $prepared_stat = $db->prepare("DELETE FROM ProductReview WHERE email=?");
+                        $prepared_stat->execute(array($email));
+                    };
+                    
                     $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, review) VALUES (?, ?, ?, ?, ?);");
 
                     $prepared_stat->execute(array($email, $phone, $age, $gender, $review));
+                    
 
                 };
 
