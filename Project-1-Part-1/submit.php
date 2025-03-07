@@ -148,7 +148,11 @@
                 };
 
                 function addData(){
-
+                    $email = $_POST["email"];
+                    $phone = $_POST["phone"];
+                    $age = $_POST["age"];
+                    $gender = $_POST["gender"];
+                    $review = $_POST["review"];
 
                 };
 
