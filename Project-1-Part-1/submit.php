@@ -20,7 +20,7 @@
                         if (valInputs()){
                             print("<p>All inputs are valid!</p>");
                             addData();
-                            print("<p>Now will this work?</p>");
+                            print("<p><a href='data.php'>Check out our other reviews!</a></p>");
                         };
                     };
                 };
