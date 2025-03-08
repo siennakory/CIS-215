@@ -16,12 +16,25 @@
         <main>
             <?php
 
-                function main(){
+                require('dbconfig.php');
+                $db = connectDB();
 
+                function main(){
+                    reviewArray();
                 };
 
                 function reviewArray(){
+                    $select_id = $db->prepare('SELECT id FROM ProductReview');
+                    $select_all = $db-prepare('SELECT * FROM ProductReview');
+                    $select_id->execute;
+                    $select_all->execute;
 
+                    $ids = $select_id->fetchAll();
+                    $id_array = array();
+                    foreach ($ids as $array){
+                        array_push($id_array, $array["id"]);
+                    };
+                    var_dump($id_array);
                 };
 
                 function displayReviews(){
