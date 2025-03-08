@@ -199,8 +199,8 @@
                         $prepared_stat->execute(array($email));
                     };
                     
-                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, stars, review) VALUES (?, ?, ?, ?, ?, ?);");
-                    $prepared_stat->execute(array($email, $phone, $age, $gender, $stars, $review));
+                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (names, email, phone, age, gender, stars, review) VALUES (?, ?, ?, ?, ?, ?, ?);");
+                    $prepared_stat->execute(array($name, $email, $phone, $age, $gender, $stars, $review));
                 };
 
                 main();

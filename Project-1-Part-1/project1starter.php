@@ -97,12 +97,12 @@
                 <div>
                     <label for="gender">What is your gender?</label>
                     <select name="gender" id="gender" required>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Nonbinary">Nonbinary</option>
-                        <option value="Genderfluid">Genderfluid</option>
-                        <option value="Agender">Agender</option>
-                        <option value="Choose not to say/Other">Choose not to say/Other</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                        <option value="nb">Nonbinary</option>
+                        <option value="gf">Genderfluid</option>
+                        <option value="a">Agender</option>
+                        <option value="o">Choose not to say/Other</option>
                     </select>
                 </div>
 
