@@ -107,7 +107,7 @@
                 </div>
 
                 <div>
-                    <label for="stars">How would you rate us out of 5 stars</label>
+                    <label for="stars">How would you rate us out of 5 stars?</label>
                     <select name="stars" id="stars" required>
                         <option value="0">0</option>
                         <option value="1">1</option>
