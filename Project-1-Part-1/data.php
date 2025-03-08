@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <link href="STYLESHEET.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Product Review Data</title>
@@ -17,13 +17,13 @@
             <?php
 
                 function main(){
-                    reviewArray();
-                };
-
-                function reviewArray(){
-                    require('dbconfig.php');
+                    require "dbconfig.php";
                     $db = connectDB();
 
+                    displayReviews($db, reviewArray($db));
+                };
+
+                function reviewArray($db){
                     $select_id = $db->prepare('SELECT id FROM ProductReview');
                     $select_id->execute();
 
@@ -33,19 +33,16 @@
                         array_push($id_array, $array["id"]);
                     };
                     
-                    displayReviews($id_array);
+                    return $id_array;
                 };
 
-                function displayReviews($id_array){
-                    require('dbconfig.php');
-                    $db = connectDB();
-
-                    $select_all = $db-prepare('SELECT * FROM ProductReview');
+                function displayReviews($db, $id_array){
+                    $select_all = $db->prepare('SELECT * FROM ProductReview');
                     $select_all->execute();
 
                     foreach ($id_array as $id){
                         $review_array = $select_all->fetch();
-                        $name = $review_array["name"];
+                        $name = $review_array["names"];
                         $age = $review_array["age"];
                         $gender = $review_array["gender"];
                         $stars = $review_array["stars"];
@@ -66,8 +63,7 @@
                         };
 
                         print("<div class='review'><p>Name: $name | Age: $age | Gender: $gender | Rating: $stars stars</p>
-                        <p>Review:</p>
-                        <p>$review</p></div>");
+                        <p>Review: $review</p></div>");
                     };
 
                 };
