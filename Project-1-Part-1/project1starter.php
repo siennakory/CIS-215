@@ -15,6 +15,11 @@
         <main>
             <form action="submit.php" method="post" class="survey">
 
+                <div> <!-- added question -->
+                    <label for="name">Enter your name: </label>
+                    <input type="text" name="name" id="name" minlength="1" maxlength="20">
+                </div>
+
                 <div>
                     <label for="email">Enter your email: (@genesee.edu) </label>
                     <input type="email" name="email" id="email">
@@ -98,6 +103,18 @@
                         <option value="gf">Genderfluid</option>
                         <option value="a">Agender</option>
                         <option value="o">Choose not to say/Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="stars">How would you rate us out of 5 stars</label>
+                    <select name="stars" id="stars">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
 

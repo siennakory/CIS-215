@@ -135,13 +135,42 @@
                     };
                 };
 
+                function valStars(){
+                    $stars = $_POST["stars"];
+                    if ($stars > 0){
+                        return True;
+                    } else {
+                        print("<p>Rating is empty. :(</p> <p>Plase return to the form and select an option.</p>");
+                        return False;
+                    };
+                };
+
+                valName(){
+                    $name = $_POST["name"];
+                    if (ctype_alpha($name) AND (strlen($name) >= 1) AND(strlen($name) <= 20)){
+                        return True;
+                    } elseif (strlen($name) > 20) {
+                        print("<p>Name is too long. :(</p> <p>Plase return to the form and try again.</p>");
+                        return False;
+                    } elseif (strlen($name) < 1) {
+                        print("<p>Name is empty. :(</p> <p>Plase return to the form and add a response.</p>");
+                    } else {
+                        print("<p>Name is invalid. :(</p> <p>Plase return to the form and try again.</p>");
+                        return False;
+                    };
+                };
+
                 function valInputs(){
                     if (valEmail()){
                         if (valPhone()){
                             if (valAge()){
                                 if (valGender()){
                                     if (valReview()){
-                                        return True;
+                                        if (valStars()){
+                                            if (valName()){
+                                                return True;
+                                            };
+                                        };
                                     };
                                 };
                             };
@@ -161,9 +190,7 @@
                     $db = connectDB();
 
                     $select_emails = $db->prepare("SELECT email FROM ProductReview");
-
                     $select_emails->execute();
-
                     $select_array = $select_emails->fetchAll();
                     $email_array = array();
 
@@ -172,16 +199,12 @@
                     };
 
                     if (in_array($email, $email_array)){
-                        print("it works");
                         $prepared_stat = $db->prepare("DELETE FROM ProductReview WHERE email=?");
                         $prepared_stat->execute(array($email));
                     };
                     
-                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, review) VALUES (?, ?, ?, ?, ?);");
-
-                    $prepared_stat->execute(array($email, $phone, $age, $gender, $review));
-                    
-
+                    $prepared_stat = $db->prepare("INSERT INTO ProductReview (email, phone, age, gender, stars, review) VALUES (?, ?, ?, ?, ?, ?);");
+                    $prepared_stat->execute(array($email, $phone, $age, $gender, $stars, $review));
                 };
 
                 main();
