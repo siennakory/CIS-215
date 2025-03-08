@@ -145,7 +145,7 @@
                     };
                 };
 
-                valName(){
+                function valName(){
                     $name = $_POST["name"];
                     if (ctype_alpha($name) AND (strlen($name) >= 1) AND(strlen($name) <= 20)){
                         return True;
