@@ -186,6 +186,8 @@
                     $age = $_POST["age"];
                     $gender = $_POST["gender"];
                     $review = $_POST["review"];
+                    $name = $_POST["name"];
+                    $stars = $_POST["stars"];
 
                     $db = connectDB();
 
