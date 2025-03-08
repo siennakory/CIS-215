@@ -131,7 +131,7 @@
 
                 function valStars(){
                     $stars = $_POST["stars"];
-                    if ($stars > 0){
+                    if ($stars > -1){
                         return True;
                     } else {
                         print("<p>Rating is empty. :(</p> <p>Plase return to the form and select an option.</p>");
