@@ -45,8 +45,8 @@
                 function age($db){
                     print("<h2>Respondent Ages:</h2>");
 
-                    $select_id = $db->prepare('SELECT age FROM ProductReview');
-                    $select_id->execute();
+                    $select_age = $db->prepare('SELECT age FROM ProductReview');
+                    $select_age->execute();
 
                     $age_select = $select_id->fetchAll();
                     $age_array = array();
@@ -175,8 +175,8 @@
                 function gender($db){
                     print("<h2>Respondent Genders:</h2>");
 
-                    $select_id = $db->prepare('SELECT gender FROM ProductReview');
-                    $select_id->execute();
+                    $select_gender = $db->prepare('SELECT gender FROM ProductReview');
+                    $select_gender->execute();
 
                     $gender_select = $select_id->fetchAll();
                     $gender_array = array();
@@ -261,10 +261,7 @@
                 };
 
                 function stars($db){
-
-                };
-
-                function ratings($db){
+                    print("<h2>Average Rating:</h2>");
 
                 };
 
