@@ -10,6 +10,7 @@
         <header>
             <h1>Product Review</h1>
             <p>Let us know how we did!</p>
+            <p><a href="data.php">Check out our other reviews here!</a></p>
         </header>
 
         <main>
