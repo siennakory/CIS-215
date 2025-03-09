@@ -21,6 +21,8 @@
 
                     $id_array = reviewArray($db);
 
+                    stars($db);
+
                     age($db);
 
                     gender($db);
@@ -48,7 +50,7 @@
                     $select_age = $db->prepare('SELECT age FROM ProductReview');
                     $select_age->execute();
 
-                    $age_select = $select_id->fetchAll();
+                    $age_select = $select_age->fetchAll();
                     $age_array = array();
                     foreach ($age_select as $array){
                         array_push($age_array, $array["age"]);
@@ -178,7 +180,7 @@
                     $select_gender = $db->prepare('SELECT gender FROM ProductReview');
                     $select_gender->execute();
 
-                    $gender_select = $select_id->fetchAll();
+                    $gender_select = $select_gender->fetchAll();
                     $gender_array = array();
                     foreach ($gender_select as $array){
                         array_push($gender_array, $array["gender"]);
@@ -262,6 +264,43 @@
 
                 function stars($db){
                     print("<h2>Average Rating:</h2>");
+
+                    $select_stars = $db->prepare('SELECT stars FROM ProductReview');
+                    $select_stars->execute();
+
+                    $stars_select = $select_stars->fetchAll();
+                    $stars_array = array();
+                    foreach ($stars_select as $array){
+                        array_push($stars_array, $array["stars"]);
+                    };
+
+                    $rating = 0;
+                    $count = 0;
+
+                    foreach ($stars_array as $item){
+                        if ($item == "0"){
+                            $count++;
+                        } elseif ($item == "1"){
+                            $rating += 1;
+                            $count++;
+                        } elseif ($item == "2"){
+                            $rating += 2;
+                            $count++;
+                        } elseif ($item == "3"){
+                            $rating += 3;
+                            $count++;
+                        } elseif ($item == "4"){
+                            $rating += 4;
+                            $count++;
+                        } elseif ($item == "5"){
+                            $rating += 5;
+                            $count++;
+                        };
+                    };
+
+                    $average = round($rating/$count, 1);
+
+                    print("<p>Our product has received an average of $average stars from $count reviews.</p>");
 
                 };
 
