@@ -20,6 +20,7 @@
                             print("<p>Your responses have been saved! If you complete the form again with the same email your review will be updated with your new responses.</p>");
                             addData();
                             print("<p><a href='data.php'>Check out our other reviews here!</a></p>");
+                            print("<p><a href='project1starter.php'>Return to Form.</a></p>");
                         };
                     };
                 };

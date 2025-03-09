@@ -10,6 +10,7 @@
         <header>
             <h1>Product Reviews:</h1>
             <p><a href="summary.php">Too much? Check out a summary of our reviews!</a></p>
+            <p><a href='project1starter.php'>Return to Form.</a></p>"
         </header>
 
         <main>
