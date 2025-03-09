@@ -21,7 +21,7 @@
 
                     $id_array = reviewArray($db);
 
-                    $age = age($db);
+                    reviews($db, $id_array);
 
                 };
 
@@ -39,7 +39,8 @@
                 };
 
                 function age($db){
-
+                    print("<h2>Respondent Ages:</h2>");
+                    
                 };
 
                 function gender($db){
@@ -55,18 +56,21 @@
                 };
 
                 function reviews($db, $id_array){
+                    print("<h2>A Few of Our Reviews:</h2>");
+                    $index_array = array_rand($id_array, 3);
 
-                    $select_all = $db->prepare('SELECT * FROM ProductReview WHERE id="?"');
-                    $select_all->execute();
+                    foreach ($index_array as $item){
+                        $index = $id_array[$item];
+                        $select_all = $db->prepare('SELECT * FROM ProductReview WHERE id=?');
+                        $select_all->execute(array($index));
 
-                    foreach ($id_array as $id){
                         $review_array = $select_all->fetch();
                         $name = $review_array["names"];
                         $age = $review_array["age"];
                         $gender = $review_array["gender"];
                         $stars = $review_array["stars"];
                         $review = $review_array["review"];
-                        
+
                         if ($gender == "m"){
                             $gender = "Male";
                         } elseif ($gender == "f"){
@@ -81,11 +85,10 @@
                             $gender = "Choose not to say/Other";
                         };
 
-                        print("<div><h2>$name's Review:</h2>
+                        print("<div><h3>$name's Review:</h3>
                         <p>Age: $age | Gender: $gender | Rating: $stars stars</p>
                         <p>$review</p></div>");
                     };
-
                 };
 
                 main();
