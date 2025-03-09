@@ -23,6 +23,8 @@
 
                     age($db);
 
+                    gender($db);
+
                     reviews($db, $id_array);
 
                 };
@@ -103,29 +105,41 @@
 
                     if ($winning_age == $a0_12){
                         array_push($winner_array, "0-12");
-                    } elseif ($winning_age == $a13_17){
+                    };
+                    if ($winning_age == $a13_17){
                         array_push($winner_array, "13-17");
-                    } elseif ($winning_age == $a18_22){
+                    };
+                    if ($winning_age == $a18_22){
                         array_push($winner_array, "18-22");
-                    } elseif ($winning_age == $a23_27){
+                    };
+                    if ($winning_age == $a23_27){
                         array_push($winner_array, "23-27");
-                    } elseif ($winning_age == $a28_32){
+                    };
+                    if ($winning_age == $a28_32){
                         array_push($winner_array, "28-32");
-                    } elseif ($winning_age == $a33_37){
+                    };
+                    if ($winning_age == $a33_37){
                         array_push($winner_array, "33-37");
-                    } elseif ($winning_age == $a38_42){
+                    };
+                    if ($winning_age == $a38_42){
                         array_push($winner_array, "38-42");
-                    } elseif ($winning_age == $a43_47){
+                    };
+                    if ($winning_age == $a43_47){
                         array_push($winner_array, "43-47");
-                    } elseif ($winning_age == $a48_52){
+                    };
+                    if ($winning_age == $a48_52){
                         array_push($winner_array, "48-52");
-                    } elseif ($winning_age == $a53_57){
+                    };
+                    if ($winning_age == $a53_57){
                         array_push($winner_array, "53-57");
-                    } elseif ($winning_age == $a58_62){
+                    };
+                    if ($winning_age == $a58_62){
                         array_push($winner_array, "58-62");
-                    } elseif ($winning_age == $a63_67){
+                    };
+                    if ($winning_age == $a63_67){
                         array_push($winner_array, "63-67");
-                    } elseif ($winning_age == $a68){
+                    };
+                    if ($winning_age == $a68){
                         array_push($winner_array, "68+");
                     };
 
@@ -134,7 +148,7 @@
                         $count++;
                     };
 
-                    if ($count = 1){
+                    if ($count == 1){
                         $winner = $winner_array[0];
                         print("<p>Most of our respondents were aged $winner.</p>");
                     } else {
@@ -161,90 +175,60 @@
                 function gender($db){
                     print("<h2>Respondent Genders:</h2>");
 
-                    $select_id = $db->prepare('SELECT age FROM ProductReview');
+                    $select_id = $db->prepare('SELECT gender FROM ProductReview');
                     $select_id->execute();
 
-                    $age_select = $select_id->fetchAll();
-                    $age_array = array();
-                    foreach ($age_select as $array){
-                        array_push($age_array, $array["age"]);
+                    $gender_select = $select_id->fetchAll();
+                    $gender_array = array();
+                    foreach ($gender_select as $array){
+                        array_push($gender_array, $array["gender"]);
                     };
 
-                    $a0_12 = 0;
-                    $a13_17 = 0;
-                    $a18_22 = 0;
-                    $a23_27 = 0;
-                    $a28_32 = 0;
-                    $a33_37 = 0;
-                    $a38_42 = 0;
-                    $a43_47 = 0;
-                    $a48_52 = 0;
-                    $a53_57 = 0;
-                    $a58_62 = 0;
-                    $a63_67 = 0;
-                    $a68 = 0;
+                    $m = 0;
+                    $f = 0;
+                    $nb = 0;
+                    $gf = 0;
+                    $a = 0;
+                    $o = 0;
 
-                    foreach ($age_array as $item){
-                        if ($item == "0-12"){
-                            $a0_12++;
-                        } elseif ($item == "13-17"){
-                            $a13_17++;
-                        } elseif ($item == "18-22"){
-                            $a18_22++;
-                        } elseif ($item == "23-27"){
-                            $a23_27++;
-                        } elseif ($item == "28-32"){
-                            $a28_32++;
-                        } elseif ($item == "33-37"){
-                            $a33_37++;
-                        } elseif ($item == "38-42"){
-                            $a38_42++;
-                        } elseif($item == "43-47"){
-                            $a43_47++;
-                        } elseif ($item == "48-52"){
-                            $a48_52++;
-                        } elseif ($item == "53-57"){
-                            $a53_57++;
-                        } elseif ($item == "58-62"){
-                            $a58_62++;
-                        } elseif ($item == "63-67"){
-                            $a63_67++;
-                        } elseif ($item == "68+"){
-                            $a68++;
+                    foreach ($gender_array as $item){
+                        if ($item == "m"){
+                            $m++;
+                        } elseif ($item == "f"){
+                            $f++;
+                        } elseif ($item == "nb"){
+                            $nb++;
+                        } elseif ($item == "gf"){
+                            $gf++;
+                        } elseif ($item == "a"){
+                            $a++;
+                        } elseif ($item == "o"){
+                            $o++;
                         };
                     };
 
-                    $count_array = array($a0_12, $a13_17, $a18_22, $a23_27, $a28_32, $a33_37, $a38_42, $a43_47, $a48_52, $a53_57, $a58_62, $a63_67, $a68);
+                    $count_array = array($m, $f, $nb, $gf, $a, $o);
                     rsort($count_array);
-                    $winning_age = $count_array[0];
+                    $winning_gender = $count_array[0];
                     $winner_array = array();
 
-                    if ($winning_age == $a0_12){
-                        array_push($winner_array, "0-12");
-                    } elseif ($winning_age == $a13_17){
-                        array_push($winner_array, "13-17");
-                    } elseif ($winning_age == $a18_22){
-                        array_push($winner_array, "18-22");
-                    } elseif ($winning_age == $a23_27){
-                        array_push($winner_array, "23-27");
-                    } elseif ($winning_age == $a28_32){
-                        array_push($winner_array, "28-32");
-                    } elseif ($winning_age == $a33_37){
-                        array_push($winner_array, "33-37");
-                    } elseif ($winning_age == $a38_42){
-                        array_push($winner_array, "38-42");
-                    } elseif ($winning_age == $a43_47){
-                        array_push($winner_array, "43-47");
-                    } elseif ($winning_age == $a48_52){
-                        array_push($winner_array, "48-52");
-                    } elseif ($winning_age == $a53_57){
-                        array_push($winner_array, "53-57");
-                    } elseif ($winning_age == $a58_62){
-                        array_push($winner_array, "58-62");
-                    } elseif ($winning_age == $a63_67){
-                        array_push($winner_array, "63-67");
-                    } elseif ($winning_age == $a68){
-                        array_push($winner_array, "68+");
+                    if ($winning_gender == $m){
+                        array_push($winner_array, "Male");
+                    }; 
+                    if ($winning_gender == $f){
+                        array_push($winner_array, "Female");
+                    };
+                    if ($winning_gender == $nb){
+                        array_push($winner_array, "Nonbinary");
+                    };
+                    if ($winning_gender == $gf){
+                        array_push($winner_array, "Genderfluid");
+                    };
+                    if ($winning_gender == $a){
+                        array_push($winner_array, "Agender");
+                    };
+                    if ($winning_gender == $o){
+                        array_push($winner_array, "Choose not to say/Other");
                     };
 
                     $count = 0;
@@ -252,12 +236,12 @@
                         $count++;
                     };
 
-                    if ($count = 1){
+                    if ($count == 1){
                         $winner = $winner_array[0];
-                        print("<p>Most of our respondents were aged $winner.</p>");
+                        print("<p>Most of our respondents identified as $winner.</p>");
                     } else {
                         $winner = $winner_array[0];
-                        $message = "<p>Most of our respondents were aged $winner";
+                        $message = "<p>Most of our respondents identified as $winner";
                         $count--;
                         $index = 1;
                         while ($count > 1){
@@ -271,7 +255,7 @@
                             $index++;
                         };
                         $winner =$winner_array[$index];
-                        $message = $message . " and $winner";
+                        $message = $message . " or $winner.";
                         print($message);
                     };
                 };
