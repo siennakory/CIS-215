@@ -61,8 +61,9 @@
                             $gender = "Choose not to say/Other";
                         };
 
-                        print("<div class='review'><p>Name: $name | Age: $age | Gender: $gender | Rating: $stars stars</p>
-                        <p>Review: $review</p></div>");
+                        print("<div><h2>$name's Review:</h2>
+                        <p>Age: $age | Gender: $gender | Rating: $stars stars</p>
+                        <p>$review</p></div>");
                     };
 
                 };
