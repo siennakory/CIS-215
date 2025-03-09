@@ -169,7 +169,7 @@
                             $index++;
                         };
                         $winner =$winner_array[$index];
-                        $message = $message . " and $winner.";
+                        $message = $message . " and $winner.</p>";
                         print($message);
                     };
                 };
@@ -257,7 +257,7 @@
                             $index++;
                         };
                         $winner =$winner_array[$index];
-                        $message = $message . " or $winner.";
+                        $message = $message . " or $winner.</p>";
                         print($message);
                     };
                 };
