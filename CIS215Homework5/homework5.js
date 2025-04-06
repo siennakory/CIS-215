@@ -14,6 +14,12 @@ function main() {
     console.log(forEvenArray(10));
     
     console.log("--------------------");
+
+    console.log(reverseArray([3, 15, 2, 4, 5, 7, 9, 8]));
+    
+    console.log("--------------------");
+
+    fizzBuzz(20);
 };
 
 function whileEchoTwoThree() {
@@ -78,5 +84,43 @@ function forEvenArray(n){
     };
     return evenarray;
 };  
+
+function reverseArray(myarray){
+    let reverse = [];
+    let count = -1
+    for (const num of myarray){
+        count++;
+    };
+
+    while (count > -1){
+        reverse.push(myarray[count]);
+        count--;
+    };
+    return reverse;
+};
+
+function fizzBuzz(n){
+    let count = 1;
+    let numberarray = [];
+    while (count <= n){
+        numberarray.push(count);
+        count++;
+    };
+
+    for (const num of numberarray){
+        if (((num % 3) == 0) && ((num % 5) == 0)){
+            console.log("FizzBuzz");
+        } 
+        else if ((num % 3) == 0){
+            console.log("Fizz");
+        } 
+        else if ((num % 5) == 0){
+            console.log("Buzz");
+        } 
+        else {
+            console.log(num);
+        };
+    };
+};
 
 main();
