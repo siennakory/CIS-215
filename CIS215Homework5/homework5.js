@@ -6,6 +6,14 @@ function main() {
     forEchoTwoThree();
 
     console.log("--------------------");
+
+    console.log(whileEvenArray(10));
+    
+    console.log("--------------------");
+
+    console.log(forEvenArray(10));
+    
+    console.log("--------------------");
 };
 
 function whileEchoTwoThree() {
@@ -36,5 +44,39 @@ function forEchoTwoThree() {
         };
     };
 };
+
+function whileEvenArray(n){
+    let count = 1;
+    let evenarray = [];
+
+    while (count <= n){
+        if ((count % 2) == 0){
+            evenarray.push(count);
+        };
+        count++;
+    };
+    return evenarray;
+};
+
+function forEvenArray(n){
+    let basearray = [];
+    let count = 1;
+
+    while (count <= n){
+        basearray.push(count);
+        count++;
+    };
+    console.log(basearray);
+
+    let evenarray = [];
+
+    for (const num in basearray){
+        console.log(num);
+        if ((basearray[num] % 2) == 0){
+            evenarray.push(basearray[num]);
+        };
+    };
+    return evenarray;
+};  
 
 main();
