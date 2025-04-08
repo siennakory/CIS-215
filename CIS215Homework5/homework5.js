@@ -72,7 +72,6 @@ function forEvenArray(n){
         basearray.push(count);
         count++;
     };
-    console.log(basearray);
 
     let evenarray = [];
 
