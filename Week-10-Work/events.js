@@ -1,11 +1,11 @@
 const phone = document.querySelector("input[type='tel']");
 
-$('input[type="tel"]').focus((event) => {
+/* $('input[type="tel"]').focus((event) => {
     event.target.style.backgroundColor = "red";
-});
+});*/
 
-/*phone.addEventListener("focus", (event) => {
-    event.target.style.backgroundColor = "red";
+phone.addEventListener("focus", (event) => {
+    event.target.style.backgroundColor = "pink";
 });
 
 phone.addEventListener("input", (event) => {
@@ -15,4 +15,3 @@ phone.addEventListener("input", (event) => {
 phone.addEventListener("copy", (event) => {
     document.body.style.color = "red";
 });
-*/
