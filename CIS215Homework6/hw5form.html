@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<title>Web Forms</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<form action="" method="post">
+
+<div>
+<label for="email-id">Enter your email: </label>    
+<input type="email" name="email-name" id="email-id" required>
+</div>
+
+<div>
+<label>Enter your password:
+    <input type="password" name="pw-name" id="pw-id" required>
+</label>
+</div>
+
+<div>
+<label> How would you rate JS on a scale from 1 to 10? 
+    <input type="number" name="rate-js" id="rate-js" min="1" max="10" step="1" required>
+</label>
+</div>
+
+<div>
+    <label>What is your favorite topic from JS? 
+    </label>
+    <div>
+        <label>
+            <input type="radio" name="js-topic" id="js-topic-eventlisteners"> Events (Native JS)
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="js-topic" id="js-topic-jquery"> Events (jQuery)
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="js-topic" id="js-topic-fetch"> AJAX fetch
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="js-topic" id="js-topic-other"> Other
+        </label>
+    </div>
+</div>
+
+<div>
+<label> What do you like about JS?
+    <input type="text" name="js-text" id="js-text" max="120"> 
+</label>
+</div>
+
+<div>
+<button type="submit" name="button" id = "button" class="btn btn-info">Submit</button> 
+</div>
+</form>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body></html>
