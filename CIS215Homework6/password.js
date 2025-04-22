@@ -9,10 +9,10 @@ async function passwordCheck(event){
     let formDataVar = new FormData(form, submitter);
     let userPassword = formDataVar.get("pw-name");
 
-    const response = await fetch(`password.php?password=${userPassword}`);
-    console.log(response);
+    const sendPW = await fetch(`password.php?password=${userPassword}`);
+    console.log(sendPW);
 
-    let checkResult = await response.json();
+    let checkResult = await sendPW.json();
     console.log(checkResult);
     
     pwMsg.textContent = checkResult["message"];
