@@ -56,7 +56,9 @@ function addTextBox(){
 };
 
 function deleteTextBox(){
-    clickstatus = 0;
-    const tbInput = document.querySelector("input[id='js-topic-other-tb']");
-    tbInput.remove();
+    if (clickstatus > 0){
+        clickstatus = 0;
+        const tbInput = document.querySelector("input[id='js-topic-other-tb']");
+        tbInput.remove();
+    };
 };
